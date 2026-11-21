@@ -1,0 +1,11 @@
+{
+  "name": "massimo",
+  "owner": { "name": "Tom Killeen" },
+  "plugins": [
+    {
+      "name": "massimo",
+      "source": "./",
+      "description": "The Vignelli canon for agents: DESIGN.md plus UI, poster, infographic and packaging skills."
+    }
+  ]
+}

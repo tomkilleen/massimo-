@@ -1,0 +1,6 @@
+/* "Massimo Sans": real Helvetica where installed, Arimo (open, metric-compatible) everywhere else.
+   Declaring it this way stops machines silently substituting another face for Helvetica. */
+@font-face { font-family: "Massimo Sans"; src: local("Helvetica Neue"), local("HelveticaNeue"), local("Helvetica"), url("arimo-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Massimo Sans"; src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"), local("Helvetica Bold"), local("Helvetica-Bold"), url("arimo-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Libre Bodoni"; src: url("libre-bodoni-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Libre Bodoni"; src: url("libre-bodoni-latin-700-normal.woff2") format("woff2"); font-weight: 700; }

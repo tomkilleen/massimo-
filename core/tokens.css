@@ -1,0 +1,64 @@
+/* Vignelli tokens. Mirrors DESIGN.md. Drop into any project and use the variables. */
+:root {
+  /* Colour: black, white, one red. Blue and yellow only as category identifiers. */
+  --v-ink: #111111;
+  --v-paper: #ffffff;
+  --v-grey: #5e5e5e;
+  --v-hairline: #d4d4d4;
+  --v-wash: #f2f2f0;
+  --v-red: #e2231a;
+  --v-blue: #0039a6;
+  --v-yellow: #ffcc00;
+
+  /* Type: two families at most. */
+  --v-sans: "Massimo Sans", "Helvetica Neue", Helvetica, Arimo, Arial, sans-serif;
+  --v-serif: "Libre Bodoni", "Bodoni 72", Didot, "Bodoni MT", serif;
+
+  /* Sizes: fixed scale. No more than three per screen. */
+  --v-label: 12px;   /* bold, uppercase, 0.06em tracking */
+  --v-body: 16px;
+  --v-head: 32px;
+  --v-display: 64px;
+  --v-figure: 128px; /* once per screen */
+
+  /* Module and grid. Everything is a multiple of 6px, ideally 12px or 24px. */
+  --v-line: 24px;
+  --v-half: 12px;
+  --v-quarter: 6px;
+  --v-double: 48px;
+  --v-quad: 96px;
+  --v-gutter: 24px;
+  --v-margin: 24px;
+  --v-band: 48px;
+  --v-max: 1440px;
+
+  /* Rules: two weights only. */
+  --v-rule-heavy: 2px solid var(--v-ink);
+  --v-rule-light: 1px solid var(--v-hairline);
+  --v-rule-light-ink: 1px solid var(--v-ink);
+
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; border-radius: 0; box-shadow: none; }
+html, body { margin: 0; background: var(--v-paper); color: var(--v-ink); }
+body { font-family: var(--v-sans); font-size: var(--v-body); line-height: var(--v-line); -webkit-font-smoothing: antialiased; text-align: left; hyphens: none; }
+:focus-visible { outline: 2px solid var(--v-red); outline-offset: 2px; }
+
+.v-band { background: var(--v-ink); color: var(--v-paper); min-height: var(--v-band); display: flex; align-items: center; justify-content: space-between; gap: var(--v-gutter); padding: 0 var(--v-margin); font-size: var(--v-label); line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.v-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--v-gutter); max-width: var(--v-max); margin: 0 auto; padding: 0 var(--v-margin); }
+.v-label { font-size: var(--v-label); line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.v-head { font-size: var(--v-head); line-height: 36px; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+.v-display { font-size: var(--v-display); line-height: 1; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+.v-figure { font-size: var(--v-figure); line-height: 1; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.v-rule { border: 0; border-top: var(--v-rule-heavy); margin: 0; }
+.v-rule-light { border: 0; border-top: var(--v-rule-light); margin: 0; }
+.v-button { display: inline-flex; align-items: center; height: var(--v-band); padding: 0 var(--v-half); background: var(--v-ink); color: var(--v-paper); border: 0; font: 700 var(--v-label)/16px var(--v-sans); text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; }
+.v-button:hover { background: var(--v-red); }
+.v-link { background: none; border: 0; padding: 0 0 2px; border-bottom: var(--v-rule-heavy); color: var(--v-ink); font: 700 var(--v-label)/16px var(--v-sans); text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; text-decoration: none; }
+.v-link:hover { color: var(--v-red); border-color: var(--v-red); }
+.v-attention { background: var(--v-red); color: var(--v-paper); padding: 0 var(--v-quarter); font: 700 var(--v-label)/24px var(--v-sans); text-transform: uppercase; letter-spacing: 0.06em; }
+table.v-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.v-table th { text-align: left; font-size: var(--v-label); line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: var(--v-half) var(--v-half) var(--v-half) 0; border-bottom: var(--v-rule-heavy); vertical-align: bottom; }
+.v-table td { padding: var(--v-half) var(--v-half) var(--v-half) 0; border-bottom: var(--v-rule-light); vertical-align: top; }
+.v-table .num { text-align: right; }

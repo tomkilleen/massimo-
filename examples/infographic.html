@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<title>Four media share one canon — diagram</title>
+<style>
+/* Grid unit 24. Lines at 0° and 45° only. Two sizes: 12 labels, 32 title. One colour per medium; black is the shared canon. */
+html, body { margin: 0; background: #fff; }
+svg { display: block; width: 1440px; height: 768px; }
+text { font-family: "Massimo Sans", "Helvetica Neue", Helvetica, Arimo, Arial, sans-serif; fill: #111; }
+.t { font-size: 32px; font-weight: 700; letter-spacing: -0.01em; }
+.l { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.d { font-size: 12px; font-weight: 400; fill: #5e5e5e; }
+.line { fill: none; stroke-width: 8; stroke-linejoin: round; stroke-linecap: butt; }
+.stn { fill: #fff; stroke: #111; stroke-width: 2; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1440 768" role="img" aria-label="Diagram: four lines (interface, poster, infographic, packaging) run together from the canon through grid, type, colour and rules, then branch to their outputs.">
+  <text class="l" x="96" y="96">THE VIGNELLI SYSTEM · HOW IT WORKS</text>
+  <text class="t" x="96" y="144">Four media share one canon.</text>
+  <line x1="96" y1="192" x2="1344" y2="192" stroke="#111" stroke-width="2"/>
+
+  <!-- shared trunk then branches -->
+  <path class="line" stroke="#0039A6" d="M144 432 H840 L960 312 H1224"/>
+  <path class="line" stroke="#FCCC0A" d="M144 444 H840 L912 372 H1224"/>
+  <path class="line" stroke="#00933C" d="M144 456 H840 L912 528 H1224"/>
+  <path class="line" stroke="#FF6319" d="M144 468 H840 L960 588 H1224"/>
+
+  <!-- origin: the canon -->
+  <rect x="96" y="408" width="48" height="84" fill="#111"/>
+  <text class="l" x="96" y="396">THE CANON</text>
+  <text class="d" x="96" y="516">Vignelli, 2010</text>
+
+  <!-- shared stations -->
+  <g>
+    <rect class="stn" x="282" y="420" width="12" height="60"/><text class="l" x="264" y="396">GRID</text><text class="d" x="264" y="516">12 columns, 24px line</text>
+    <rect class="stn" x="450" y="420" width="12" height="60"/><text class="l" x="432" y="396">TYPE</text><text class="d" x="432" y="516">Helvetica, three sizes</text>
+    <rect class="stn" x="618" y="420" width="12" height="60"/><text class="l" x="600" y="396">COLOUR</text><text class="d" x="600" y="516">Black, white, one red</text>
+    <rect class="stn" x="786" y="420" width="12" height="60"/><text class="l" x="768" y="396">RULES</text><text class="d" x="768" y="516">2px and 1px only</text>
+  </g>
+
+  <!-- branch stations: output -->
+  <circle class="stn" cx="1080" cy="312" r="9"/><text class="d" x="1056" y="288">DESIGN.md + Impeccable</text>
+  <circle class="stn" cx="1080" cy="372" r="9"/><text class="d" x="1056" y="400">PDF at A2</text>
+  <circle class="stn" cx="1080" cy="528" r="9"/><text class="d" x="1056" y="504">SVG + PNG</text>
+  <circle class="stn" cx="1080" cy="588" r="9"/><text class="d" x="1056" y="616">SVG dieline</text>
+
+  <!-- terminals -->
+  <rect x="1224" y="300" width="12" height="24" fill="#0039A6"/><text class="l" x="1248" y="317">INTERFACE</text>
+  <rect x="1224" y="360" width="12" height="24" fill="#FCCC0A"/><text class="l" x="1248" y="377">POSTER</text>
+  <rect x="1224" y="516" width="12" height="24" fill="#00933C"/><text class="l" x="1248" y="533">INFOGRAPHIC</text>
+  <rect x="1224" y="576" width="12" height="24" fill="#FF6319"/><text class="l" x="1248" y="593">PACKAGING</text>
+
+  <line x1="96" y1="672" x2="1344" y2="672" stroke="#d4d4d4" stroke-width="1"/>
+  <text class="d" x="96" y="696">A diagram of the system, not a chart of data. Colours identify media, after the route colours of the 1972 New York subway diagram. Example made with the massimo-infographic skill.</text>
+</svg>
+</body>
+</html>

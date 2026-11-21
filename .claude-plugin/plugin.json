@@ -1,0 +1,8 @@
+{
+  "name": "massimo",
+  "version": "0.1.0",
+  "description": "Massimo: design skills after The Vignelli Canon. one design system (DESIGN.md) and four skills for UI, posters, infographics and packaging, with a checker that measures output against the canon.",
+  "author": { "name": "Tom Killeen" },
+  "license": "MIT",
+  "keywords": ["design", "vignelli", "swiss", "modernist", "design-system", "DESIGN.md", "typography", "grid"]
+}

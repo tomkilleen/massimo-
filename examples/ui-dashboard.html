@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="fonts/fonts.css">
+<title>Halden House — Energy</title>
+<link rel="stylesheet" href="../core/tokens.css">
+<style>
+/* Grid 12 × 24px. Sizes on this screen: 12 label, 16 body, 128 figure. Red marks the one fault. */
+.wrap { padding-top: var(--v-double); padding-bottom: var(--v-quad); row-gap: 0; }
+.sec { display: contents; }
+.lab { grid-column: 1 / span 3; padding-top: var(--v-half); }
+.lab p { margin: var(--v-quarter) 0 0; color: var(--v-grey); }
+.main { grid-column: 4 / span 9; }
+.rule { grid-column: 1 / -1; border-top: var(--v-rule-heavy); margin: var(--v-double) 0 0; }
+.live { display: grid; grid-template-columns: repeat(9, minmax(0,1fr)); column-gap: var(--v-gutter); align-items: end; }
+.live .num { grid-column: 1 / span 6; display: flex; align-items: flex-end; gap: var(--v-half); }
+.live .num .v-figure { margin: 0; }
+.live .num .v-label { padding-bottom: 18px; }
+.live .alert { grid-column: 7 / span 3; padding-bottom: 18px; }
+.alert p { margin: var(--v-quarter) 0 0; }
+.band nav { display: flex; gap: var(--v-line); }
+.band nav a { color: var(--v-paper); text-decoration: none; }
+.band nav a[aria-current] { box-shadow: none; border-bottom: 2px solid var(--v-paper); padding-bottom: 6px; }
+svg text { font-family: var(--v-sans); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.chart { display: block; width: 100%; height: auto; margin-top: var(--v-half); }
+.v-table td .v-label, .v-table td .v-attention { line-height: 24px; display: inline-block; }
+.foot { grid-column: 4 / span 9; margin-top: var(--v-double); color: var(--v-grey); }
+</style>
+</head>
+<body>
+<header class="v-band band">
+  <span>Halden House — Energy</span>
+  <nav aria-label="Sections">
+    <a href="#" aria-current="page">Overview</a><a href="#">Floors</a><a href="#">Plant</a><a href="#">Faults</a><a href="#">Reports</a>
+  </nav>
+</header>
+
+<main class="v-grid wrap">
+  <div class="lab"><span class="v-label">Live load</span><p>Thursday 21 November, 14:20</p></div>
+  <div class="main live">
+    <div class="num"><span class="v-figure">412</span><span class="v-label">kW</span></div>
+    <div class="alert"><span class="v-attention">1 fault</span><p>Chiller 2 tripped at 13:52. Cooling on Floors 4–6 running on Chiller 1 only.</p></div>
+  </div>
+
+  <div class="rule"></div>
+  <div class="lab"><span class="v-label">Today against last Thursday</span><p>Whole building, kW, 00:00–24:00</p></div>
+  <div class="main">
+    <svg class="chart" viewBox="0 0 936 264" role="img" aria-label="Load today rises to 412 kW at 14:20; last Thursday peaked at 388 kW at 13:00.">
+      <line x1="0" y1="240" x2="840" y2="240" stroke="#111" stroke-width="1"/>
+      <text x="0" y="262" fill="#5e5e5e">00</text><text x="210" y="262" fill="#5e5e5e">06</text><text x="420" y="262" fill="#5e5e5e">12</text><text x="630" y="262" fill="#5e5e5e">18</text><text x="822" y="262" fill="#5e5e5e">24</text>
+      <polyline fill="none" stroke="#5e5e5e" stroke-width="2" points="0,204 35,206 70,208 105,207 140,206 175,204 210,180 245,140 280,96 315,78 350,70 385,64 420,60 455,60 490,66 525,72 560,80 595,98 630,130 665,160 700,184 735,196 770,202 805,204 840,205"/>
+      <polyline fill="none" stroke="#111" stroke-width="2" points="0,206 35,207 70,209 105,208 140,207 175,205 210,178 245,132 280,90 315,70 350,60 385,52 420,46 455,42 490,40 498,39"/>
+      <circle cx="498" cy="39" r="4" fill="#111"/>
+      <text x="510" y="36" fill="#111">TODAY 412</text>
+      <text x="848" y="208" fill="#5e5e5e">LAST THU</text>
+    </svg>
+  </div>
+
+  <div class="rule"></div>
+  <div class="lab"><span class="v-label">By floor</span><p>Load now and against the floor's baseline for this hour</p></div>
+  <div class="main">
+    <table class="v-table">
+      <thead><tr><th>Floor</th><th>Use</th><th class="num">Load kW</th><th class="num">Baseline</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Ground</td><td>Reception, café</td><td class="num">38</td><td class="num">+2%</td><td class="v-label" style="color:var(--v-grey)">Normal</td></tr>
+        <tr><td>1</td><td>Offices</td><td class="num">54</td><td class="num">−4%</td><td class="v-label" style="color:var(--v-grey)">Normal</td></tr>
+        <tr><td>2</td><td>Offices</td><td class="num">57</td><td class="num">+1%</td><td class="v-label" style="color:var(--v-grey)">Normal</td></tr>
+        <tr><td>3</td><td>Offices</td><td class="num">61</td><td class="num">+6%</td><td class="v-label" style="color:var(--v-grey)">Normal</td></tr>
+        <tr><td>4</td><td>Labs</td><td class="num">83</td><td class="num">+14%</td><td><span class="v-attention">Cooling at risk</span></td></tr>
+        <tr><td>5</td><td>Labs</td><td class="num">72</td><td class="num">+9%</td><td class="v-label" style="color:var(--v-grey)">Watch</td></tr>
+        <tr><td>6</td><td>Plant room</td><td class="num">47</td><td class="num">−18%</td><td class="v-label" style="color:var(--v-grey)">Chiller 2 off</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="foot v-label">Sample data. Example made with the massimo-ui skill.</p>
+</main>
+</body>
+</html>

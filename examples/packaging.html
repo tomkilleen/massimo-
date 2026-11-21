@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<title>Tea carton — dieline and range</title>
+<style>
+/* Tuck-end carton 70 × 50 × 130 mm on kraft board. Panel module 6 mm, margins 6 mm inside folds.
+   Sizes: name 11 mm, text 3.5 mm, legal 2.2 mm. Constant: kraft and black. Variable: one band colour per blend. */
+html, body { margin: 0; background: #fff; }
+body { font-family: "Massimo Sans", "Helvetica Neue", Helvetica, Arimo, Arial, sans-serif; color: #111; }
+.sheet { display: grid; grid-template-columns: 1200px; padding: 48px; gap: 48px; }
+svg text { font-family: "Massimo Sans", "Helvetica Neue", Helvetica, Arimo, Arial, sans-serif; fill: #111; }
+.n { font-size: 11px; font-weight: 700; letter-spacing: -0.02em; }
+.t { font-size: 3.5px; font-weight: 400; }
+.tb { font-size: 3.5px; font-weight: 700; }
+.s { font-size: 2.2px; font-weight: 400; }
+.dl { font-size: 2.2px; font-weight: 700; fill: #00AEEF; letter-spacing: 0.06em; }
+.cut { fill: none; stroke: #FF00FF; stroke-width: 0.25; }
+.fold { fill: none; stroke: #00AEEF; stroke-width: 0.25; stroke-dasharray: 1.5 1; }
+.head { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 12px; border-top: 2px solid #111; padding-top: 12px; }
+p.note { font-size: 12px; line-height: 16px; color: #5e5e5e; margin: 12px 0 0; max-width: 720px; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<section>
+<p class="head">Dieline with artwork · 1:1 in mm</p>
+<svg viewBox="0 0 300 300" width="1200" height="1200" role="img" aria-label="Flat carton net with cut and fold lines and the artwork for Earl Grey.">
+  <!-- bleed artwork: kraft everywhere it prints -->
+  <g id="art">
+    <path d="M36 88 H106 L108 64 H154 L156 88 V38 H159 L161 23 H221 L223 38 H226 V88 L228 64 H274 L276 88 V218 L274 242 H228 L226 218 H156 L154 242 H108 L106 218 V268 H103 L101 283 H41 L39 268 H36 V218 L24 212 V94 Z" fill="#B88A5A" stroke="#B88A5A" stroke-width="6" stroke-linejoin="miter"/>
+    <!-- the band: one colour per blend, wrapping every side panel at the same height -->
+    <rect x="21" y="190" width="258" height="12" fill="#0039A6"/>
+    <!-- front panel 36–106 -->
+    <text class="tb" x="42" y="100">TEA</text>
+    <text class="n" x="42" y="124">Earl</text>
+    <text class="n" x="42" y="136">Grey.</text>
+    <text class="t" x="42" y="148">Black tea with bergamot.</text>
+    <text class="t" x="42" y="154">20 tea bags.</text>
+    <line x1="42" y1="94" x2="100" y2="94" stroke="#111" stroke-width="0.7"/>
+    <text class="tb" x="42" y="210">50 g</text>
+    <!-- side 1: 106–156 -->
+    <line x1="112" y1="94" x2="150" y2="94" stroke="#111" stroke-width="0.7"/>
+    <text class="tb" x="112" y="100">Brew</text>
+    <text class="t" x="112" y="106">One bag. 250 ml water</text>
+    <text class="t" x="112" y="111">just off the boil.</text>
+    <text class="t" x="112" y="116">Three minutes.</text>
+    <text class="t" x="112" y="121">Milk if you like.</text>
+    <!-- back 156–226: legal panel -->
+    <line x1="162" y1="94" x2="220" y2="94" stroke="#111" stroke-width="0.7"/>
+    <text class="tb" x="162" y="100">Earl Grey. Black tea with bergamot.</text>
+    <text class="s" x="162" y="108">INGREDIENTS</text><text class="s" x="190" y="108">[Supplied by client]</text>
+    <line x1="162" y1="110" x2="220" y2="110" stroke="#111" stroke-width="0.18"/>
+    <text class="s" x="162" y="114">ALLERGENS</text><text class="s" x="190" y="114">[Supplied by client]</text>
+    <line x1="162" y1="116" x2="220" y2="116" stroke="#111" stroke-width="0.18"/>
+    <text class="s" x="162" y="120">NET WEIGHT</text><text class="s" x="190" y="120">50 g (20 × 2.5 g)</text>
+    <line x1="162" y1="122" x2="220" y2="122" stroke="#111" stroke-width="0.18"/>
+    <text class="s" x="162" y="126">BEST BEFORE</text><text class="s" x="190" y="126">See base</text>
+    <line x1="162" y1="128" x2="220" y2="128" stroke="#111" stroke-width="0.18"/>
+    <text class="s" x="162" y="132">MADE BY</text><text class="s" x="190" y="132">[Name and address]</text>
+    <line x1="162" y1="134" x2="220" y2="134" stroke="#111" stroke-width="0.18"/>
+    <text class="s" x="162" y="138">RECYCLING</text><text class="s" x="190" y="138">[Marks supplied by client]</text>
+    <!-- side 2: 226–276: barcode area -->
+    <line x1="232" y1="94" x2="270" y2="94" stroke="#111" stroke-width="0.7"/>
+    <rect x="232" y="150" width="37" height="26" fill="#fff"/>
+    <text class="s" x="234" y="164">[EAN-13 barcode]</text>
+    <!-- lid 156–226 above body -->
+    <text class="tb" x="162" y="64">Earl Grey.</text>
+    <text class="t" x="162" y="70">20 tea bags.</text>
+  </g>
+
+  <!-- cut lines (not printed) -->
+  <g id="cut">
+    <path class="cut" d="M36 88 H106 L108 64 H154 L156 88 V38 H159 L161 23 H221 L223 38 H226 V88 L228 64 H274 L276 88 V218 L274 242 H228 L226 218 H156 L154 242 H108 L106 218 V268 H103 L101 283 H41 L39 268 H36 V218 L24 212 V94 Z"/>
+  </g>
+  <!-- fold lines (not printed) -->
+  <g id="fold">
+    <path class="fold" d="M36 88 V218 M106 88 V218 M156 88 V218 M226 88 V218"/>
+    <path class="fold" d="M106 88 H156 M156 88 H226 M226 88 H276 M156 38 H226 M106 218 H156 M226 218 H276 M36 218 H106 M36 268 H106"/>
+  </g>
+  <!-- panel names (dieline colour, outside the print) -->
+  <g>
+    <text class="dl" x="38" y="294">FRONT 70 × 130</text>
+    <text class="dl" x="110" y="252">SIDE 50</text>
+    <text class="dl" x="162" y="252">BACK 70 × 130 · LEGAL</text>
+    <text class="dl" x="230" y="252">SIDE 50 · BARCODE</text>
+    <text class="dl" x="162" y="17">LID AND TUCK</text>
+    <text class="dl" x="6" y="152">GLUE</text>
+  </g>
+</svg>
+<p class="note">Magenta: cut. Cyan, dashed: fold. Artwork bleeds 3 mm past cut lines. Structure to be confirmed by the printer for the board used. Bracketed text is content still needed from the client.</p>
+</section>
+
+<section>
+<p class="head">Range · fronts at 1:1</p>
+<svg viewBox="0 0 250 140" width="1200" height="672" role="img" aria-label="Three carton fronts: Earl Grey with a blue band, Breakfast with a red band, Green with a yellow band.">
+  <g transform="translate(0,5)">
+    <rect x="0" y="0" width="70" height="130" fill="#B88A5A"/><rect x="0" y="102" width="70" height="12" fill="#0039A6"/>
+    <line x1="6" y1="6" x2="64" y2="6" stroke="#111" stroke-width="0.7"/><text class="tb" x="6" y="12">TEA</text>
+    <text class="n" x="6" y="36">Earl</text><text class="n" x="6" y="48">Grey.</text><text class="t" x="6" y="60">Black tea with bergamot.</text><text class="t" x="6" y="66">20 tea bags.</text><text class="tb" x="6" y="122">50 g</text>
+  </g>
+  <g transform="translate(90,5)">
+    <rect x="0" y="0" width="70" height="130" fill="#B88A5A"/><rect x="0" y="102" width="70" height="12" fill="#E2231A"/>
+    <line x1="6" y1="6" x2="64" y2="6" stroke="#111" stroke-width="0.7"/><text class="tb" x="6" y="12">TEA</text>
+    <text class="n" x="6" y="36">Break-</text><text class="n" x="6" y="48">fast.</text><text class="t" x="6" y="60">Strong black tea.</text><text class="t" x="6" y="66">20 tea bags.</text><text class="tb" x="6" y="122">50 g</text>
+  </g>
+  <g transform="translate(180,5)">
+    <rect x="0" y="0" width="70" height="130" fill="#B88A5A"/><rect x="0" y="102" width="70" height="12" fill="#FFCC00"/>
+    <line x1="6" y1="6" x2="64" y2="6" stroke="#111" stroke-width="0.7"/><text class="tb" x="6" y="12">TEA</text>
+    <text class="n" x="6" y="36">Green.</text><text class="t" x="6" y="60">Sencha green tea.</text><text class="t" x="6" y="66">20 tea bags.</text><text class="tb" x="6" y="122">50 g</text>
+  </g>
+</svg>
+<p class="note">Constant: kraft board, black Helvetica, the rule and the layout. Variable: the name and one band colour. Sample brand. Example made with the massimo-packaging skill.</p>
+</section>
+</div>
+</body>
+</html>
